@@ -23,6 +23,7 @@ class Category(models.Model):
         
 class Product_Classification(models.Model):
     id = models.AutoField(primary_key=True)
+    product_id = models.IntegerField()
     classification = models.CharField(max_length=200)
     def __str__(self):
         return self.classification

@@ -22,11 +22,15 @@ py -3 -m venv venv
 venv\scripts\activate
 ```
 
-######
-Install required dependancies, and migrate db tables and static datasets.
+###### Install required dependancies, and migrate db tables and static datasets.
 ```
 pip install -r requirements.txt
 python manage.py migrate
+```
+
+###### Scrape product information
+```
+python manage.py scrape_data
 ```
 
 ###### Run the app:

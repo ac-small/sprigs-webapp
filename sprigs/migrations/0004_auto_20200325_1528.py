@@ -32,7 +32,6 @@ category_options = (
 def populate_initial_data(apps, schema_editor):
     Category = apps.get_model('sprigs', 'Category')
     for category in category_options:
-        print (category)
         Category.objects.bulk_create([Category(category=category)])
 
 def reverse_function(apps, schema_editor):

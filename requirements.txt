@@ -3,3 +3,8 @@ psycopg2-binary==2.8.4
 pytz==2018.5
 whitenoise==4.1
 requests==2.18.4
+pandas==0.25.3
+seaborn==0.10.0
+numpy==1.17.4
+scikit-learn==0.22.2.post1
+nltk==3.4.5

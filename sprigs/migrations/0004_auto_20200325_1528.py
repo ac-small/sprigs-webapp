@@ -4,7 +4,7 @@ from django.db import migrations
 
 category_options = (
     ('Chicken Breast Boneless Skinless'),
-    ('Chicken Breast Bone-In Skinless '),
+    ('Chicken Breast Bone-In Skinless'),
     ('Chicken Breast Bone-In Skin-On'),
     ('Chicken Thigh Boneless Skinless'),
     ('Chicken Thigh Bone-In Skin-On'),

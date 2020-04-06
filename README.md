@@ -33,6 +33,11 @@ python manage.py migrate
 python manage.py scrape_data
 ```
 
+###### Run classifications
+```
+python manage.py classify
+```
+
 ###### Run the app:
 ```
 python manage.py runserver

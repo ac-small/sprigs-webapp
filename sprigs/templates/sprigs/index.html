@@ -11,8 +11,8 @@
 		</div>
 	</div>
 	<div class="row">
-			<form>
-				<select id="category_dropdown" name="category" onChange="form.submit();">
+			<form action="/category" id="category_selection" method="GET">
+				<select form="category_selection" id = "category" name="category" onChange="form.submit();">
 					<option disabled selected>Select</option>
 					{% for item in object_list %}
 						<option value='{{ item.category }}'>{{ item.category }}</option>

@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import dj_database_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,16 +77,7 @@ WSGI_APPLICATION = 'azuresite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd61n18et97e6hc',
-        'HOST': 'ec2-34-233-186-251.compute-1.amazonaws.com',
-        'USER': 'fthbxayhspchra',
-        'PASSWORD': '38320d5cfd7ac0d8bd151406442c798f3b0fda3f5c446d6b8a22b6d94bd26e3b',
-        'PORT': '5432'
-    }
-}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 # Password validation

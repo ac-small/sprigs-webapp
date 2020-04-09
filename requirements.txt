@@ -8,3 +8,4 @@ seaborn==0.10.0
 numpy==1.17.4
 scikit-learn==0.22.2.post1
 nltk==3.4.5
+dj-database-url

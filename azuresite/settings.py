@@ -77,11 +77,12 @@ WSGI_APPLICATION = 'azuresite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sprigs',
-        'HOST': 'localhost',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd61n18et97e6hc',
+        'HOST': 'ec2-34-233-186-251.compute-1.amazonaws.com',
+        'USER': 'fthbxayhspchra',
+        'PASSWORD': '38320d5cfd7ac0d8bd151406442c798f3b0fda3f5c446d6b8a22b6d94bd26e3b',
+        'PORT': '5432'
     }
 }
 

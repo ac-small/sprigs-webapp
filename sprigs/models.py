@@ -7,7 +7,7 @@ class Product(models.Model):
     id = models.AutoField(primary_key=True)
     product_name = models.CharField(default=None, blank=True, null=True, max_length=500)
     merchant = models.CharField(default=None, blank=True, null=True, max_length=400)
-    flyer_id = models.CharField(default=None, blank=True, null=True, max_length=200)
+    flyer_id = models.IntegerField(default=None, blank=True, null=True)
     price_units = models.CharField(default=None, blank=True, null=True, max_length=200)
     sale_price = models.CharField(default=None, blank=True, null=True, max_length=50)
     start_date = models.DateTimeField('start date', default=None, blank=True, null=True)

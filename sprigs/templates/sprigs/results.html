@@ -1,0 +1,42 @@
+{% load static %}
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+</head>
+
+<link rel="stylesheet" type="text/css" href="{% static 'sprigs/themes-cdn-6.1-gcweb/css/ie8-theme.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'sprigs/themes-cdn-6.1-gcweb/css/ie8-wet-boew.min.css' %}">
+
+<div class="container">
+	<div class="row text-center">
+		<div class="col-lg-12">
+            <h4>Results</h4>
+		</div>
+	</div>
+	<div class="row">
+        <table id="datatable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Retail Price</th>
+                    <th>Start Date</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+    <a href="/"><button>Return to Home Page</button></a>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var oTable = $('#datatable').dataTable({
+        "processing": true,
+        "serverSide": true,
+        "searching": false,
+        "ajax": "{% url 'sprigs:order_list_json' %}"
+    });
+});
+</script>

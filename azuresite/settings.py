@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +26,7 @@ SECRET_KEY = '-^rq(x*d--6_#635*j84d5(fz9@-3(9vdr_s$9+^@cw08dq(ja'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sprigs-poc.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['sprigs-poc.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -77,7 +76,15 @@ WSGI_APPLICATION = 'azuresite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sprigs',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres'
+        }
+}
 
 
 # Password validation

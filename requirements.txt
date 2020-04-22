@@ -10,3 +10,4 @@ scikit-learn==0.22.2.post1
 nltk==3.4.5
 dj-database-url
 bokeh==2.0.1
+django-datatables-view==1.19.1
